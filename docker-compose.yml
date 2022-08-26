@@ -1,0 +1,7 @@
+services:
+    app:
+        build:
+            context: .
+            args:
+                PHP_VERSION: $PHP_VERSION
+        command: tail -f

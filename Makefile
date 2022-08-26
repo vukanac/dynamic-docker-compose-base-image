@@ -1,3 +1,11 @@
+.PHONY: show
+
+show:
+	docker-compose up --build -d
+	docker-compose exec app php -v
+	docker-compose down --remove-orphans
+
+
 .PHONY: direct
 
 direct: PHP_VERSION=latest
